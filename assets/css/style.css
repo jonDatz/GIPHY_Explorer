@@ -1,0 +1,61 @@
+/* 
+font-family: 'Anton', sans-serif;
+font-family: 'Sirin Stencil', cursive;
+font-family: 'Fredoka One', cursive;
+*/
+
+#g {
+    color: #9933FF;
+    font-family: 'Fredoka One', cursive;
+}
+
+#i {
+    color: #00CCFF;
+    font-family: 'Fredoka One', cursive;
+}
+
+#p {
+    color: #FF6666;
+    font-family: 'Fredoka One', cursive;
+}
+
+#h {
+    color: #00FF99;
+    font-family: 'Fredoka One', cursive;
+}
+
+#y {
+    color: #FFF35C;
+    font-family: 'Fredoka One', cursive;
+}
+
+body {
+    background-color: #00CCFF;
+}
+
+.navbarStyle {
+    border-bottom: 8px solid #9933FF; 
+}
+
+.giphyLogo {
+    font-size: 36px;
+    padding-left: 35px;
+}
+
+#collector {
+    font-family: 'Sirin Stencil', cursive;
+    font-size: 26px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .navbar-brand .giphyLogo {
+        text-align: center;
+    }
+}
