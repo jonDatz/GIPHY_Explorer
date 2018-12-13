@@ -1,7 +1,7 @@
 /* 
-font-family: 'Anton', sans-serif;
 font-family: 'Sirin Stencil', cursive;
 font-family: 'Fredoka One', cursive;
+font-family: 'Ubuntu', sans-serif;
 */
 
 #g {
@@ -47,6 +47,20 @@ body {
     font-size: 26px;
 }
 
+#buttonBox {
+    margin: 40px;
+    padding: 20px 5px 20px 5px;
+    background-color: rgba(242, 248, 253, .5);
+    text-align: center;
+    border-radius: 1px;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+.showButtons {
+    margin: 4px;
+    border-radius: 2px;
+}
 
 
 
