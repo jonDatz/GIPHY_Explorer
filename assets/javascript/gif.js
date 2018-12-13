@@ -51,6 +51,7 @@ $("#add-Show").on("click", function(event) {
 
     // The movie from the textbox is then added to our array
     shows.push(show);
+    $('#show-input').val('');
 
     // Calling renderButtons which handles the processing of our movie array
     showButtons();

@@ -48,13 +48,23 @@ body {
 }
 
 #buttonBox {
-    margin: 40px;
+    margin: 40px 20px 5px 20px;
     padding: 20px 5px 20px 5px;
     background-color: rgba(242, 248, 253, .5);
     text-align: center;
     border-radius: 1px;
     font-family: 'Ubuntu', sans-serif;
     
+}
+
+#gifBox {
+    margin: 5px 20px 40px 20px;
+    padding: 20px 5px 20px 5px;
+    background-color: rgba(46, 46, 46, 0.5);
+    text-align: center;
+    border-radius: 1px;
+    font-family: 'Ubuntu', sans-serif;
+     
 }
 
 .showButtons {
