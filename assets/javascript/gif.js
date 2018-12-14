@@ -8,7 +8,7 @@ let shows = ["Adventure Time", "Courage the Cowardly Dog", "Bojack Horseman"];
 function displayShow (){
 
 let show = $(this).attr("data-name");
-let queryURL = "http://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=wH45n8pCbWdmGgONQpIimBMLweZWUWKQ";
+let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=wH45n8pCbWdmGgONQpIimBMLweZWUWKQ";
 
 console.log(queryURL);
 console.log(show);
