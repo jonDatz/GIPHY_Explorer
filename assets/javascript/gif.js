@@ -1,5 +1,5 @@
 
-let shows = ["Adventure Time", "Courage the Cowardly Dog", "Misadventures of Flapjack"];
+let shows = ["Adventure Time", "Courage the Cowardly Dog", "Bojack Horseman"];
 
 
 
@@ -18,13 +18,62 @@ $.ajax({
     method: "GET"
   }).then(function(response) {
 
+    let results = response.data;
+
+    $("#gifBox").empty();
+
     console.log(response);
+
+    for (let i = 0; i < 10; i++) {
+      console.log(results[i]);
+
+
+      let showDiv = $("<div>");
+      let rating = results[i].rating;
+      let p = $("<p>").text("Rating: " + rating);
+      let showImage = $("<img>");
+      showDiv.attr("class", "card gifImages" );
+      showImage.attr("src", results[i].images.fixed_height_still.url);
+      showImage.attr("data-still", results[i].images.fixed_height_still.url);
+      showImage.attr("data-animate", results[i].images.fixed_height.url);
+      showImage.data("state", "still" );
+      showImage.attr("class", "dancingGifs");
+      showDiv.prepend(p);
+      showDiv.prepend(showImage);
+
+
+      $("#gifBox").prepend(showDiv);
+    }
+
+    // *** ANIMATE AND PAUSE GIFS *** //
+
+  $(".dancingGifs").on("click", function () {
+
+    console.log('This ran');
+
+    let state = $(this).data("state");
+    console.log(state);
+
+    if (state === "still") {
+        $(this).attr("src", $(this).attr("data-animate"));
+        $(this).data("state", "animate");
+    } else {
+        $(this).attr("src", $(this).attr("data-still"));
+        $(this).data("state", "still");
+        
+    }
+
+
+
+  });
 
 
   });
 
 
 }
+
+// *** Runs on Page Load. Shows buttons at top of screen *** //
 
 function showButtons () {
     $('#buttonBox').empty();
@@ -46,6 +95,7 @@ function showButtons () {
 
 $("#add-Show").on("click", function(event) {
     event.preventDefault();
+
     // This line of code will grab the input from the textbox
     var show = $("#show-input").val().trim();
 
@@ -58,7 +108,9 @@ $("#add-Show").on("click", function(event) {
   });
 
 
+
+
+
 $(document).on("click", ".showButtons", displayShow);
 showButtons();
 
-//   Bootstrap button NEEDS: <button type="button" class="btn btn-dark">Dark</button>
