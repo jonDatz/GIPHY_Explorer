@@ -10,7 +10,7 @@ function displayShow (){
 let show = $(this).attr("data-name");
 let queryURL = "https://api.giphy.com/v1/gifs/search?q=" + show + "&api_key=wH45n8pCbWdmGgONQpIimBMLweZWUWKQ";
 
-console.log(queryURL);
+
 console.log(show);
 console.log(shows);
 $.ajax({
